@@ -1,0 +1,173 @@
+/* =====================
+   Global Styles
+===================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #0d1117;
+  color: #f0f6fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  padding: 1rem;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =====================
+   Start Screen
+===================== */
+.start-screen h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ca1432;
+}
+
+.start-screen p {
+  margin-bottom: 1rem;
+  color: #8b949e;
+}
+
+.start-screen button {
+  background: linear-gradient(135deg, #38212b, #ca1432);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 0.8rem 1.6rem;
+  margin: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.start-screen button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 118, 148, 0.45);
+}
+
+.start-screen button:active {
+  transform: scale(0.96);
+}
+
+/* =====================
+   Game Screen
+===================== */
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #ca1432;
+}
+
+h2 {
+  margin: 0.5rem 0;
+  color: #f0f6fc;
+}
+
+button {
+  background: linear-gradient(135deg, #38212b, #ca1432);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(155, 114, 236, 0.45);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* =====================
+   Cards
+===================== */
+.cards-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  background: linear-gradient(145deg, #161b22, #1c1f26);
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* NEW: distinct separation */
+  border: 2px solid #21262d;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: #58a6ff;
+  box-shadow: 0 10px 25px rgba(88, 166, 255, 0.35);
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-name {
+  padding: 0.7rem;
+  font-size: 1rem;
+  color: #f0f6fc;
+  background: #0d1117;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #21262d;
+}
+
+/* =====================
+   Responsive Layout
+===================== */
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 0.5rem;
+  }
+  .card-name {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet (481px–1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 1rem;
+  }
+}
+
+/* Desktop (>1024px) */
+@media (min-width: 1025px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 2rem;
+  }
+}
